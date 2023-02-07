@@ -6,8 +6,6 @@ const assertEqual = function(actual, expected) {
     // console.assert(actual === expected, `✅✅✅ ${actual} !== ${expected}`);
     console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
   }
-  
-  
 };
 
 // TEST CODE
