@@ -1,29 +1,3 @@
-const eqArrays = function (arr1, arr2) {
-  // compare the length of arr1
-  const length1 = arr1.length;
-  const length2 = arr2.length;
-  if (length1 !== length2) {
-    return false;
-    // compare the item inside one by one
-  } else {
-    for (let i = 0; i < length1; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${JSON.stringify(actual)} equals ${JSON.stringify(expected)}`);
-  } else {
-    // console.assert(actual === expected, `✅✅✅ ${actual} !== ${expected}`);
-    console.log(`🛑🛑🛑 Assertion failed: ${JSON.stringify(actual)} not equals ${JSON.stringify(expected)}`);
-  }
-};
-
 // function to find the positions of each letter in the sentence
 const letterPositions = function(sentence) {
   const results = {};
@@ -41,12 +15,15 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 // test code
 // const result1 = letterPositions("hello");
-// const result2 = letterPositions("lighthouseLabs is great");
+const result2 = letterPositions("lighthouseLabs is great");
 // console.log(result1);
-// console.log(result2);
+console.log(result2);
 // assertArraysEqual(result1.h,[0]);
 // assertArraysEqual(result1.e,[1]);
 // assertArraysEqual(result1.l,[2,3]);
 // assertArraysEqual(result1.o,[4]);
+// {l:[0],i:[1,15],g:[2,18],h:[3,5],t:[4,22],o:[6],u:[7],s:[8,13,16],e:[9,20],L:[10],a:[11,21],b:[12],r:[19]}
